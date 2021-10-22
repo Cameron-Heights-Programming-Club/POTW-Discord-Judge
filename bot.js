@@ -16,13 +16,13 @@ const commands = [];
 // Add commands to dynamic execution
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 for (const file of commandFiles) {
-	const command = require(`./commands/${file}`);
+    const command = require(`./commands/${file}`);
     commands.push(command.info.toJSON());
-	client.commands.set(command.info.name, command);
+    client.commands.set(command.info.name, command);
 }
 
 client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
+    console.log(`Logged in as ${client.user.tag}!`);
 });
 
 client.once('ready', () => {
@@ -48,7 +48,7 @@ client.once('ready', () => {
                 console.log('Successfully registered application commands for development guild');
             }
         } catch (error) {
-            if (error) console.error(error);
+            console.error(error);
         }
     })();
 });
@@ -63,9 +63,9 @@ client.on('interactionCreate', async interaction => {
     try {
         await command.execute(interaction);
     } catch (error) {
-		console.error(error);
-		await interaction.reply({ content: "There was an error while executing this command!", ephemeral: true });
-	}
+        console.error(error);
+        await interaction.reply({ content: "There was an error while executing this command!", ephemeral: true });
+    }
 });
 
 client.login(TOKEN);
