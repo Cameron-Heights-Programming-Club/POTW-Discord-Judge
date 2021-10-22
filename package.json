@@ -1,0 +1,28 @@
+{
+  "name": "POTW-Discord-Judge",
+  "version": "1.0.0",
+  "description": "A custom bot to judge users DMOJ solutions to problem of the week.",
+  "main": "bot.js",
+  "dependencies": {
+    "@discordjs/builders": "^0.7.0",
+    "@discordjs/rest": "0.1.0-canary.0",
+    "discord-api-types": "^0.24.0",
+    "discord.js": "^13.2.0",
+    "dotenv": "^10.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cameron-Heights-Programming-Club/POTW-Discord-Judge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cameron-Heights-Programming-Club/POTW-Discord-Judge/issues"
+  },
+  "homepage": "https://github.com/Cameron-Heights-Programming-Club/POTW-Discord-Judge#readme"
+}
