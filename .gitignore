@@ -1,4 +1,5 @@
 .replit
 .env
 .breakpoints
+problems.json
 node_modules

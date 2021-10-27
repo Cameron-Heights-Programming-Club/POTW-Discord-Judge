@@ -21,8 +21,27 @@ for (const file of commandFiles) {
     client.commands.set(command.info.name, command);
 }
 
+// Load problems at startup
+client.refreshProblems = () => {
+    try {
+        client.problems = JSON.parse(fs.readFileSync("./problems.json"));
+    } catch (error){
+        console.log(error);
+        console.log("Error loading problems!");
+        client.problems = {};
+    }
+};
+
+client.saveProblems = async () => {
+    fs.writeFile("./problems.json", JSON.stringify(client.problems), (err) => {
+        if (err) throw err;
+    });
+};
+
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
+    console.log("Loading problems!");
+    client.refreshProblems();
 });
 
 client.once('ready', () => {
@@ -61,10 +80,10 @@ client.on('interactionCreate', async interaction => {
     if (!command) return;
 
     try {
-        await command.execute(interaction);
+        await command.execute(client, interaction);
     } catch (error) {
         console.error(error);
-        await interaction.reply({ content: "There was an error while executing this command!", ephemeral: true });
+        await interaction.followUp({ content: "There was an error while executing this command!", ephemeral: true });
     }
 });
 
