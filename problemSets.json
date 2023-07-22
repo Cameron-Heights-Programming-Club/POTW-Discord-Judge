@@ -1,0 +1,24 @@
+{
+    "Term 1": {
+        "Week 1": {
+            "https://dmoj.ca/problem/ccc09j1": 10,
+            "https://dmoj.ca/problem/ccc07j3": 30,
+            "https://dmoj.ca/problem/ccc15j5": 60
+        },
+        "Week 2": {
+            "https://dmoj.ca/problem/ccc02j1": 10,
+            "https://dmoj.ca/problem/ccc16j4": 30,
+            "https://dmoj.ca/problem/ccc14s2": 60
+        },
+        "Week 3": {
+            "https://dmoj.ca/problem/ccc05j2": 10,
+            "https://dmoj.ca/problem/ccc08j4": 30,
+            "https://dmoj.ca/problem/ccc15s3": 60
+        },
+        "Week 4": {
+            "https://dmoj.ca/problem/ccc12j3": 10,
+            "https://dmoj.ca/problem/ccc09s1": 30,
+            "https://dmoj.ca/problem/ccc14s3": 60
+        }
+    }
+}
